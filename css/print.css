@@ -1,0 +1,7 @@
+@media print{
+    body {
+        font-family: Georgia serif;
+        font-size: 0.5cm;
+        page-break-inside: avoid;
+    }
+}

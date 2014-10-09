@@ -1,0 +1,847 @@
+html{
+    top: 0;
+    margin: 0;
+    padding: 0;
+    #font-size:1px;
+    min-height:98%;
+    max-height: 98%;
+ 
+}
+body{
+    #font-size: 14px; 
+    #font-size: 14rem;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    text-align: left;
+    font-weight: bold;
+    font-family: sans-serif;
+    background: rgb(221,221,221);
+    #background-size: 5% 10%;
+    /* ============================== */
+    -webkit-user-select: none;
+    -moz-user-select: none;    
+    -ms-user-select: none;    
+    user-select: none;
+    /* ============================== */    
+    overflow-x: hidden;
+}
+#logo{
+    cursor: pointer;
+    width: 150px;
+    height: 20px;
+    /*
+    background: url(../images/qnd.png) no-repeat center;
+    background-size: contain;
+    */
+    background: -moz-linear-gradient( rgb(239,85,16), hsla(209, 45%, 50%, 0));
+    background: -o-linear-gradient( rgb(239,85,16), hsla(209, 45%, 50%, 0));
+    background: -webkit-linear-gradient( rgb(239,85,16), hsla(209, 45%, 50%, 0));
+    background: -ms-linear-gradient( rgb(239,85,16), hsla(209, 45%, 50%, 0));
+    background: linear-gradient( rgb(239,85,16)), hsla(209, 45%, 50%, 0));
+    margin: 0 auto;
+    #box-shadow: 1px 1px 10px rgba(221,221,221,0.9);
+    border-radius: 5px;
+    #font-family: serif;
+    font-size: 0.9em;
+    text-align: center;
+    color: white;
+    #text-shadow: 1px 0 0 black;
+    display: block;
+    padding-left: 3px;
+    padding-bottom: 10px;
+}
+
+#outerContainer{
+    width: 300px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 12px 25px 25px 25px;
+/*    
+    background: -moz-linear-gradient( hsla(209, 45%, 50%, 0.95), hsla(35, 62%, 74%, 0.95));
+    background: -o-linear-gradient( hsla(209, 45%, 50%, 0.95), hsla(35, 62%, 74%, 0.95));
+    background: -webkit-linear-gradient( hsla(209, 45%, 50%, 0.95), hsla(35, 62%, 74%, 0.95));
+    background: -ms-linear-gradient( hsla(209, 55%, 50%, 0.95), hsla(35, 72%, 74%, 0.95));
+    background: linear-gradient( hsla(209, 45%, 50%, 0.95), hsla(35, 62%, 74%, 0.95)); 
+*/ 
+    background: -moz-linear-gradient( hsla(205, 87%, 29%, 0.95), hsla(35, 62%, 74%, 0.95));
+    background: -o-linear-gradient( hsla(205, 87%, 29%, 0.95), hsla(35, 62%, 74%, 0.95));
+    background: -webkit-linear-gradient( hsla(205, 87%, 29%, 0.95), hsla(35, 62%, 74%, 0.95));
+    background: -ms-linear-gradient( hsla(205, 87%, 29%, 0.95), hsla(35, 72%, 74%, 0.95));
+    background: linear-gradient( hsla(205, 87%, 29%, 0.95), hsla(35, 62%, 74%, 0.95)); 
+   
+    box-shadow: 3px 3px 5px black;    
+    #border-radius: 20px;
+    /*hsla(200, 48%, 29%, 1.00)*/
+}
+
+#modalShroud{
+    position: absolute;
+    z-index: 3;
+    #outline: 1px solid red;
+    background:  hsla(205, 0%, 36%, 0.49);
+    visibility: hidden;
+    #overflow: hidden;
+    font-size: 0.7em;
+    text-align: center; 
+    overflow-x: auto;
+    display: inline-block;
+}
+
+#rsTable{
+    display: inline-block;
+    margin: 3% auto;
+    background: white;
+    overflow: auto;
+    text-align: left;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#btnTableNames{
+    visibility: hidden;
+}
+
+#content {
+    position: relative;
+    width: 100%;
+}
+
+
+#selectTableDiv{
+    position: relative;
+    color: hsla(35, 62%, 85%, 1);
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+    width: 100%;
+    height: 25%;
+}
+#btnSaveFile{
+    position: relative;
+    display: block;
+    width: 65px;
+    height: 16px;
+    font-size: 0.57rem;
+    margin: 0 auto;
+    padding: 2px;
+}
+#selectTable{
+    margin-bottom: 10px;
+}
+
+
+
+.saveFile:hover{
+    color: yellow;
+}
+
+.saveFile:active{
+    color: yellow;
+    box-shadow: 1px 1px 1px black inset; 
+}
+
+.outputInfo{
+    font-size: 0.78em;
+    font-style: italic;    
+    color: black;
+    #text-shadow: 1px 1px 1px black;
+    text-align: center;
+    overflow: hidden;
+}
+
+.btn{
+    border-style: none;
+    border: none;
+    visibility: hidden;
+    background-color: hsla(209, 45%, 50%, 1);
+    color: hsla(35, 62%, 85%, 1);
+    position: absolute;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: top;
+    border: 1px solid rgba(200,200,200,0.6);
+    text-shadow: 1px 1px 0 hsla(209, 75%, 25%, 1);    
+    box-shadow: 1px 1px 1px black;
+    cursor: pointer;
+    font-size: 0.6em;
+/*  ===========================  */
+    /*
+    background: -moz-linear-gradient( hsla(202, 61%, 75%, 1), hsla(202, 61%, 30%, 1) );
+    background: -o-linear-gradient( hsla(202, 61%, 75%, 1), hsla(202, 61%, 60%, 1));
+    background: -webkit-linear-gradient( hsla(202, 61%, 75%, 1), hsla(202, 61%, 30%, 1) );
+    background: -ms-linear-gradient( hsla(202, 61%, 75%, 1), hsla(202, 61%, 30%, 1));
+    background: linear-gradient( hsla(202, 61%, 75%, 1),hsla(202, 61%, 30%, 1) ); 
+    */
+/*  ===========================  */       
+}
+
+.btn:hover{
+    background-color: hsla(209, 75%, 35%, 1);
+    color: hsla(35, 62%, 95%, 1);
+}
+
+.btn:active{
+    color: yellow;
+    box-shadow: 1px 1px 1px black inset; 
+    #background: linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1)); 
+/* ---------------------------------*/     
+    background: -moz-linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1)  );
+    background: -o-linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1) );
+    background: -webkit-linear-gradient(hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1)  );
+    background: -ms-linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1) );
+    background: linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1)); 
+/* ---------------------------------*/     
+}
+#getDropboxFile{
+    left: 34%;  
+}
+#getLocalFile{
+    left: 7px;;
+}
+#killSession{
+    right: 5px;;    
+}
+#localFile{
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+}
+#progressHolder{
+	width: 85%;
+	height: 7px;
+    margin: 0 auto;
+    opacity: 0;
+    font-family: sans-serif;
+    font-size: 0.77em;
+    color: white;
+	border-radius: 15px;
+	padding-bottom: 13px;
+	background-color: hsla(209, 45%, 46%,0.7);/*gray;*/
+    vertical-align: center;
+}
+#uploadProgress{
+    position: absolute;
+    top: 47px;
+    right: 29px;
+    width: 0;
+    opacity: 0; 
+    padding-top: 0.7%;
+    border: 1px solid hsla(0, 100%, 10% ,0);
+    background: hsla(209, 40%, 40%, 1) ;
+    border-radius: 5px;
+    #box-sizing: border-box;
+    margin: 1px auto 6px;
+ 
+}
+#percentUpload{
+    color: black;
+    display: inline-block;
+    margin-top: 3px;
+    padding-left: 13px;
+	padding-bottom: 3px;
+	font-size: 0.7rem;
+
+}
+#controls{
+    overflow: hidden;
+    position: relative;
+}
+
+#editor{
+    position: relative;
+    font-size: .9em;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-family: sans-serif;
+}
+#textArea{
+    margin-top: 13px;
+    font-size: 0.75em;
+    font-weight: bold;
+    text-align: left;
+    resize: none;
+    width:100%;
+    height: 150px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#searchPanel{
+/*  ===========================  */
+    background: -moz-linear-gradient( hsla(209, 45%, 50%, 1), hsla(35, 62%, 74%, 1));
+    background: -o-linear-gradient( hsla(209, 45%, 50%, 1), hsla(35, 62%, 74%, 1));
+    background: -webkit-linear-gradient( hsla(209, 45%, 50%, 1), hsla(35, 62%, 74%, 1));
+    background: -ms-linear-gradient( hsla(209, 55%, 50%, 1), hsla(35, 72%, 74%, 1));
+    background: linear-gradient( hsla(209, 45%, 50%, 1), hsla(35, 62%, 74%, 1)); 
+/*  ===========================  */
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 200px;
+    max-height: 200px;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 8px;
+    #opacity: 0.5;
+    visibility: hidden;
+    top: 100px;
+}
+
+#innerSearchPanel{
+    width: 85%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px 0 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 1.05em;
+}
+#matchReportDiv{
+    margin-left: 50px;
+    font-style: normal;
+    font-weight: bold;
+    #font-size: 0.9em;
+}
+
+#totalMatches{
+    color: white;/*rgb(239,85,16);*/
+    text-shadow: 1px 1px 1px black;
+    font-size: 1.01em;
+}
+
+#hourGlass{
+    position: absolute;
+    z-index: 4;
+    top: 0;/*-12px;*/
+    left: 55%;
+    width: 20px;
+    padding-bottom: 20px;
+    background: url(../images/DotSwirl.gif) no-repeat center;
+    background-size: contain;
+    border-radius: 11px;
+    #border: 1px solid red;
+    opacity: 0;   
+}
+#hourGlass span{
+    position: absolute;
+    top: 10.5px;
+    left: -3px;
+    #color: white;
+    color: hsla(35, 62%, 85%, 1); 
+    text-shadow: 1px 1px 0 hsla(209, 75%, 25%, 1);      
+    font-size: 0.75em;
+    opacity: 0.8;
+}
+legend{
+    text-align: left;
+}
+ 
+#querySearchDiv{
+    position: relative;
+    #margin-bottom: 10px;
+    padding-bottom: 5px;
+    
+}
+ 
+ #btnSearch{
+    position: absolute;
+    background: url(../images/search2.png) no-repeat center;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    opacity: 1;
+    top: 315px;    
+    right: 15px;
+    cursor: pointer;
+}
+#btnSearch:hover{
+    opacity: 0.7;
+}
+#btnSearch:active{
+    box-shadow: 2px 2px 3px black inset;
+}
+
+#btnSendQuery{
+    border-style: none;
+    border: none;
+    
+    background: -moz-linear-gradient( hsla(202, 61%, 95%, 1), hsla(202, 61%, 30%, 1) );
+    background: -o-linear-gradient( hsla(202, 61%, 95%, 1), hsla(202, 61%, 60%, 1));
+    background: -webkit-linear-gradient( hsla(202, 61%, 95%, 1), hsla(202, 61%, 30%, 1) );
+    background: -ms-linear-gradient( hsla(202, 61%, 95%, 1), hsla(202, 61%, 30%, 1));
+    background: linear-gradient( hsla(202, 61%, 95%, 1),hsla(202, 61%, 30%, 1) ); 
+    /* ---------------------------------*/
+    box-shadow: 1px 1px 1px black;    
+    border-radius: 10px;
+    visibility: visible;
+    display: inline;
+    position: absolute;    
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: .7em;
+    width: 68%;
+    left: 69%;
+    margin: 1px 2px;
+}
+#btnSendQuery:active{
+    box-shadow: 1px 1px 1px black inset;
+    font-size: .7em;
+/*  ===========================  */
+    background: -moz-linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1)  );
+    background: -o-linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1) );
+    background: -webkit-linear-gradient(hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1)  );
+    background: -ms-linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1) );
+    background: linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1)); 
+/* ---------------------------------*/      
+}
+
+#searchButtons{
+    width: 100%;
+    margin: 5px auto 0;
+    height: 35px;
+}
+
+.searchButton {
+    display: inline-block;
+    width: 28px;
+    padding-bottom: 28px;
+    opacity: 0.9;
+    border-radius: 15px;
+}
+.searchButton:hover{
+    opacity: 0.75;
+    cursor: pointer;    
+}
+.searchButton:active{
+    opacity: 1;
+    box-shadow: 1px 1px 1px black inset;
+}
+
+#btnFirstRecord{
+    background: url(../images/rs.png) no-repeat center;
+    background-size: contain;    
+}
+ 
+#btnRewind{
+    background: url(../images/fb.png) no-repeat center;
+    background-size: contain;    
+}
+
+#btnBackward{
+    background: url(../images/b.png) no-repeat center;
+    background-size: contain;    
+}
+#btnForward{
+    background: url(../images/f.png) no-repeat center;
+    background-size: contain;    
+}
+#btnFastForward{
+    background: url(../images/ff.png) no-repeat center;
+    background-size: contain;    
+}
+#btnLastRecord{
+    background: url(../images/fs.png) no-repeat center;
+    background-size: contain;    
+}
+
+#btnClearSearch{
+    border-style: none;
+    border: none;
+    /*  ===========================  */
+    background: -moz-linear-gradient( hsla(202, 61%, 95%, 1), hsla(202, 61%, 30%, 1) );
+    background: -o-linear-gradient( hsla(202, 61%, 95%, 1), hsla(202, 61%, 60%, 1));
+    background: -webkit-linear-gradient( hsla(202, 61%, 95%, 1), hsla(202, 61%, 30%, 1) );
+    background: -ms-linear-gradient( hsla(202, 61%, 95%, 1), hsla(202, 61%, 30%, 1));
+    background: linear-gradient( hsla(202, 61%, 95%, 1),hsla(202, 61%, 30%, 1) ); 
+    /* ---------------------------------*/    color: hsla(35, 62%, 85%, 1);
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: top;
+    #border: 1px solid gray;
+    text-shadow: 1px 1px 0 hsla(209, 75%, 25%, 1);    
+    box-shadow: 1px 1px 1px black;
+    cursor: pointer;
+    font-size: 0.8em;    
+}
+#btnClearSearch:hover{
+    color: yellow;
+    text-shadow: 1px 1x 1px black;
+}
+
+#btnClearSearch:active{
+    color: yellow;
+    font-size: 0.78em;      
+    text-shadow: 1px 1x 1px black;
+    box-shadow: 1px 1px 1px black inset;
+/*  ===========================  */
+    background: -moz-linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1)  );
+    background: -o-linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1) );
+    background: -webkit-linear-gradient(hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1)  );
+    background: -ms-linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1) );
+    background: linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1)); 
+/* ---------------------------------*/      
+} 
+
+#recordNumber{
+    display: inline-block;
+    padding-bottom: 5px;    
+}
+
+#popOut {
+    #position: absolute;
+    margin: 0 auto;
+    height: 12px;    
+    width: 77px;
+    -moz-border-radius:  5px;    
+    -webkit-border-radius:5px;    
+    border-radius:  6px; 
+/*  ===========================  */
+    background: -moz-linear-gradient( hsla(202, 61%, 95%, 1), hsla(202, 61%, 30%, 1) );
+    background: -o-linear-gradient( hsla(202, 61%, 95%, 1), hsla(202, 61%, 60%, 1));
+    background: -webkit-linear-gradient( hsla(202, 61%, 95%, 1), hsla(202, 61%, 30%, 1) );
+    background: -ms-linear-gradient( hsla(202, 61%, 95%, 1), hsla(202, 61%, 30%, 1));
+    background: linear-gradient( hsla(202, 61%, 95%, 1),hsla(202, 61%, 30%, 1) ); 
+    /* ---------------------------------*/
+    color: white;     
+    box-shadow: 1px 1px 1px black;  
+    #text-shadow: 1px 1px 1px rgb(148,199,82);
+    /* ---------------------------------*/    
+/*  ===========================  */   
+    font-size: 0.67em;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 2px;
+    margin-bottom: 10px;      
+}
+
+#popOut:hover{
+    color: yellow;
+    text-shadow: 1px 1px 1px black;    
+}
+#popOut:active{
+    color: yellow;
+    box-shadow: 1px 1px 1px black inset;
+    font-size: 0.66em;    
+    text-shadow: 1px 1px 1px black;
+/*  ===========================  */
+    background: -moz-linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1)  );
+    background: -o-linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1) );
+    background: -webkit-linear-gradient(hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1)  );
+    background: -ms-linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1) );
+    background: linear-gradient( hsla(202, 61%, 30%, 1), hsla(202, 61%, 95%, 1)); 
+/* ---------------------------------*/    
+}
+#popupIcons{
+    position: absolute;
+}
+
+.btnShroud{
+    position: absolute;
+    margin-top: 0;
+    border-radius: 19px;
+    cursor: pointer;
+}
+
+#closeShroud{
+    top: 4px; 
+    left: 40px;
+    width: 40px;
+    padding-bottom: 30px;    
+    background: url(../images/close.png) no-repeat center;
+    background-size: contain;
+}
+
+#printShroud{
+    top: 2px; 
+    left: 0;
+    width: 40px;
+    padding-bottom: 40px;    
+    background: url(../images/print.png) no-repeat center;
+    background-size: contain;
+}
+
+.btnShroud:hover{
+    opacity: 0.65;    
+}
+.btnShroud:active{
+    box-shadow: 1px 1px 2px black inset;   
+}
+
+@media all {
+	.page-break	{ display: none; }
+}
+@media print {
+	.page-break	{ display: block; page-break-before: always; }
+}
+
+#resultSetDiv {
+/* ============================== */
+    -webkit-user-select: text;
+    -moz-user-select: text;    
+    -ms-user-select: text;    
+    user-select: text;
+/* ============================== */  
+	font-size: .78rem;
+}
+/*================================================*/
+/* ====START of Open an Save styles ============ */ 
+/*================================================*/
+#saveFilePanel{    
+    display: inline-block;
+    width: 98.3%;
+    padding-bottom: 10%;
+    position: absolute;
+    background-color: hsla(209, 45%, 50%, 1);    
+    #outline: 1px solid red;
+    #box-shadow: 1px 1px 2px black;
+    #border-radius: 3px;
+    top: 57px;
+    left: 2px;;
+    text-align: center;
+    visibility: hidden;
+    z-index: 4;
+    #opacity: 0.97; 
+    border-top: 1px solid lightgray;
+    border-left: 1px solid lightgray;    
+    border-right: 1px solid lightgray; 
+    border-bottom: 2px solid black;
+}
+#x{
+    position: absolute;   
+    background: url(../images/redx.png) no-repeat center;
+    background-size: contain;   
+    top: 2px;
+    right: 2px;
+    width: 18px;
+    padding-bottom: 18px;
+    border-radius: 10px;
+    z-index: 4; 
+    visibility: hidden;
+    opacity: 0.6;
+    cursor: pointer;
+}
+#saveFileChoices{
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: top;
+}
+#openFileChoices{
+    margin-top: -20px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: top;
+}
+#newFileChoices{
+    position: absolute;
+    width: 100%;
+    top: 85px;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    z-index: 5;
+    visibility: hidden;
+
+}
+#createFile{
+    position: absolute;
+    top: -48%;
+    left: 38%;
+    display: block;
+    font-size: 0.7em;
+    width: 25%;
+    color: lightgray;
+    opacity: 0.75;     
+    font-style: none;
+    text-shadow: none;
+    padding: 1px 1px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid hsla(209, 45%, 50%, 1);    
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+#createFile:hover{
+    opacity: 1;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    color: white;
+}
+
+#createFile:active{
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    color: yellow;
+
+}
+.access{
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid hsla(209, 45%, 50%, 1);
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;    
+    padding: 5px;
+    font-size: 0.68em; 
+    opacity: 0.9; 
+    color: lightgray;
+    margin-top: 7px;
+}
+
+.access input{
+    #background: lightgray;
+    height: 12px;
+    border-radius: 2px;
+    text-align: right;
+}
+
+.access:hover{
+    opacity: 1;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    color: white;
+}
+
+/*
+#download{
+    background-color: hsla(209, 45%, 60%, 0.85); 
+    box-shadow: 1px 1px 1px black;
+    padding: 4px 5px;
+    border-radius: 2px;
+    font-size: .82em;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin-left: 3px;
+}
+*/
+.saveFile{
+    #position: absolute;
+    background-color: hsla(209, 45%, 60%, 0.85); 
+    box-shadow: 1px 1px 1px black;
+    text-shadow: none;
+    padding: 4px 5px;
+    border-radius: 5px;
+    font-size: .8em;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    #margin-left: 5px;
+    color: white;
+}
+/*================================================*/
+/* ====END of Open an Save styles ============ */ 
+/*================================================*/
+#menu{
+    position: absolute;
+    width: 100%;
+    padding-bottom: 13%;
+    background: url(../images/bestmenu2.png) no-repeat;
+    background-size:  100% 90%;/*contain;*/ 
+    z-index: 0;
+    opacity: 1;
+}
+/* ============.menu class=========== */
+.menu{
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    color: black;    
+    box-shadow: 1px 1px 1px black;
+    width: 11.5%;
+    padding-bottom: 5.5%;
+    padding-top: 3%;
+    opacity: 0;
+    border-radius: 2px;
+    font-size: .4em;
+}
+.menu:hover{
+  cursor: pointer;
+  opacity: 1;
+  color: black;
+}
+.menu:active{
+    box-shadow: 1px 1px 1px black inset;    
+    background: hsla(209, 45%, 46%,0.7);    
+    color: white;
+}
+/* ====individual menus====== */
+#ohpen{
+    left: 13%;
+}
+#ohpen:hover{
+
+}
+
+#deleet{
+    right: 0.9%;
+    width: 12.2%;
+}
+
+#deleet:hover{
+
+}
+
+#save{
+    left: 26%;
+}
+
+#getFromDropbox{
+    position: relative;
+    text-align: center;
+    width: 145px;    
+    vertical-align: top;
+}
+#getDropboxFile span{
+    padding-right: 10px;
+}
+
+#saveToDropbox{
+    position: relative;
+    display: inline-box;
+    height: 17px; 
+    text-shadow: none;
+    box-shadow: 1px 1px 1px black;       
+    text-align: center;
+    width: 130px;    
+    vertical-align: top;
+    padding-bottom: 2px;
+}
+
+#saveToDropbox:active {
+    box-shadow: 1px 1px 1px black inset;
+}
+.dbLogo{
+    position: absolute;
+    display: inline-block;    
+    right: 5px;
+    top: -5px;
+    width: 10px;
+    background: url(../images/dblogo.png) no-repeat center;
+    background-size: contain;
+    padding-bottom: 30px;
+    margin-botom: 5px;
+    text-align: top;
+}
+.yellow{
+    color: yellow;
+}
+
+legend:hover{
+    color: white;
+
+}
+
+
+
